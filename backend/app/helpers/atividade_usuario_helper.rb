@@ -1,0 +1,2 @@
+module AtividadeUsuarioHelper
+end
