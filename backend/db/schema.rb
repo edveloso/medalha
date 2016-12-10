@@ -15,6 +15,15 @@ ActiveRecord::Schema.define(version: 20161210175137) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "atividade_usuarios", force: :cascade do |t|
+    t.integer  "atividade_id"
+    t.integer  "usuario_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["atividade_id"], name: "index_atividade_usuarios_on_atividade_id", using: :btree
+    t.index ["usuario_id"], name: "index_atividade_usuarios_on_usuario_id", using: :btree
+  end
+
   create_table "atividades", force: :cascade do |t|
     t.string   "nome"
     t.text     "descricao"
