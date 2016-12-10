@@ -1,0 +1,54 @@
+<html>
+<body>
+
+	<div class="container">
+
+		<div class="col-md-12">
+
+			<div class="jumbotron">
+				<p class="text-center">
+					<h1> Atribuição de Atividades  </h1>
+				</p>
+
+			</div>
+
+			<form>
+
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="formGroupExampleInput">Usuário</label>
+						<select class="custom-select" >
+							<% Usuario.all.each do |usuario| %>
+							<option value="1"><%= usuario.name %></option>
+							<% end %>
+						</select>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+				<div class="form-group">
+					<label for="formGroupExampleInput2">Atividade</label>
+					<select class="custom-select">
+						<% Atividade.all.each do |atividade| %>
+						<option value="1"><%= atividade.nome %></option>
+						<% end %>
+
+					</select>
+				</div>
+			</div>
+
+				<button type="button" class="btn btn-primary">Atribuir</button>
+
+			</form>
+
+
+		</div>
+
+
+	</div>
+
+
+
+</body>
+
+</html>
