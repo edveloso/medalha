@@ -33,6 +33,7 @@ docker-machine create default --driver virtualbox
 Caso já tenha a VM `default`, apenas certifique-se que ela esteja atualizada e em execução:
 ```sh
 docker-machine start default
+
 docker-machine upgrade default
 ```
 
@@ -99,3 +100,28 @@ Quaisquer outras tarefas administrativas como:
   - rake tasks
 
 Também podem ser executadas dessa mesma maneira
+
+````
+
+````
+eval $(docker-machine env default)
+
+````
+
+````
+docker-compose up web bash
+
+````
+bundle install
+
+````
+
+````
+docker-compose up web
+
+````
+
+````
+docker-compose run web rake db:migrate
+
+````
