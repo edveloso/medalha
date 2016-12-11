@@ -4,7 +4,7 @@ class AtividadeUsuariosController < ApplicationController
 	end
 
 	def index
-		@atividades_usuario = AtividadeUsuario.new
+		@atividades_usuario = AtividadeUsuario.all
 	end
 
 

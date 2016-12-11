@@ -4,7 +4,7 @@ class AtividadeUsuarioController < ApplicationController
 	end
 
 	def index
-		@atividades_usuario = AtividadeUsuario.group(:usuario_id).group(:atividade_id)
+		@atividades_usuario = AtividadeUsuario.all
 	end
 
 
