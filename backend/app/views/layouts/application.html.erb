@@ -11,8 +11,8 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <p><%= current_user.email if user_signed_in? %></p>
+
     <%= yield %>
-    <%= link_to 'Deslogar', destroy_user_session_path, method: :delete if user_signed_in? %>
+  
   </body>
 </html>

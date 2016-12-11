@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Participante Atividades</h1>
+
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Atividade</th>
+      <th>Participante</th>
+      <th>Quantidade</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @participante_atividades.each do |participante_atividade| %>
+      <tr>
+        <td><%= participante_atividade.atividade %></td>
+        <td><%= participante_atividade.participante %></td>
+        <td><%= participante_atividade.quantidade %></td>
+        <td><%= link_to 'Show', participante_atividade %></td>
+        <td><%= link_to 'Edit', edit_participante_atividade_path(participante_atividade) %></td>
+        <td><%= link_to 'Destroy', participante_atividade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Participante Atividade', new_participante_atividade_path %>

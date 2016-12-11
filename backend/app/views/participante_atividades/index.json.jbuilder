@@ -1,0 +1,1 @@
+json.array! @participante_atividades, partial: 'participante_atividades/participante_atividade', as: :participante_atividade

@@ -1,0 +1,17 @@
+<%= simple_form_for(@participante_atividade) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+
+
+
+
+    <%= f.input :atividade, label: 'Nome da atividade', error: 'Atividade' %>
+    <%= f.input :participante, label: 'Nome do participante', error: 'Participante' %>
+    <%= f.input :quantidade, label: 'Quantidade da atividade', error: 'Quantidade' %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

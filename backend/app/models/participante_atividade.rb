@@ -1,0 +1,2 @@
+class ParticipanteAtividade < ApplicationRecord
+end

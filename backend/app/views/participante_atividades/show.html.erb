@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Atividade:</strong>
+  <%= @participante_atividade.atividade %>
+</p>
+
+<p>
+  <strong>Participante:</strong>
+  <%= @participante_atividade.participante %>
+</p>
+
+<p>
+  <strong>Quantidade:</strong>
+  <%= @participante_atividade.quantidade %>
+</p>
+
+<%= link_to 'Edit', edit_participante_atividade_path(@participante_atividade) %> |
+<%= link_to 'Back', participante_atividades_path %>
