@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Atividade.delete_all
+Usuario.delete_all
+AtividadeUsuario.delete_all
 
 atividade1 = Atividade.create(nome:"Lavar louca", descricao:"lava a louca")
 atividade2 = Atividade.create(nome:"Enxugar louca", descricao:"enxugar a louca")

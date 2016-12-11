@@ -37,4 +37,12 @@ RSpec.describe Usuario, type: :model do
     expect(usuariosSetor.count).to eq 2
   end
 
+  it "Retorna quantidade de tarefas" do
+    Usuario.create(name: "Fernando", email: "lfernando.bosso@gmail.com", setor: "Ti")
+    Usuario.create(name: "Fernando", email: "lfernando.bosso@gmail.com", setor: "Aux")
+    Usuario.create(name: "Fernando", email: "lfernando.bosso@gmail.com", setor: "Ti")
+    usuariosSetor = Usuario.where(setor: "Ti")
+    expect(usuariosSetor.count).to eq 2
+  end
+
 end

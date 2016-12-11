@@ -25,7 +25,6 @@ class UsuariosController < ApplicationController
   # POST /usuarios.json
   def create
     @usuario = Usuario.new(usuario_params)
-
     respond_to do |format|
       if @usuario.save
         format.html { redirect_to @usuario, notice: 'Usuario foi criado corretamente.' }
