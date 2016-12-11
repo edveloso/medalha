@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root :to => 'atividade_usuario#index'
+  root 'atividade_usuarios#index'
   resources :participante_atividades
   resources :usuarios
 

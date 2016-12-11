@@ -22,12 +22,11 @@ class AtividadeUsuarioController < ApplicationController
 		@atividade_usuario = AtividadeUsuario.new(usuario: usuario, atividade: atividade)
     respond_to do |format|
       if @atividade_usuario.save
-        format.html { redirect_to @usuario, notice: 'Atividade do Usuario foi cadastrada corretamente.' }
-        format.json { render :show, status: :created, location: @usuario }
+				return redirect_to root_path
       else
-        format.html { render :new }
-        format.json { render json: @usuario.errors, status: :unprocessable_entity }
+				return redirect_to root_path
       end
+
     end
   end
 end

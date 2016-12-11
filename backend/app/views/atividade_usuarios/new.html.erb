@@ -1,46 +1,21 @@
-<html>
-<body>
-
-	<div class="container">
-
-		<div class="col-md-12">
-
-			<div class="jumbotron">
-				<p class="text-center">
-					<h1> Atribuição de Atividades  </h1>
-				</p>
-
+<div class="container">
+	<div class="col-md-12">
+		<%= simple_form_for AtividadeUsuario.new do |f| %>
+		<div class="col-md-6">
+			<div class="form-group">
+				<%= f.input :usuario_id,:collection => Usuario.all,:label_method => :name,:value_method => :id,:label => "Usuario" ,:include_blank => false %>
 			</div>
-
-			<%= simple_form_for AtividadeUsuario.new do |f| %>
-
-				<div class="col-md-6">
-					<div class="form-group">
-						<%= f.input :usuario_id,:collection => Usuario.all,:label_method => :name,:value_method => :id,:label => "Usuario" ,:include_blank => false %>
-					</div>
-				</div>
-
-				<div class="col-md-6">
-				<div class="form-group">
-<%= f.input :atividade_id,:collection => Atividade.all,:label_method => :nome,:value_method => :id,:label => "Atividade" ,:include_blank => false %>
-				</div>
-			</div>
-
-				<div class="form-actions">
-			    <%= f.button :submit %>
-			  </div>
-			<% end %>
-
-
-
-
 		</div>
 
+		<div class="col-md-6">
+			<div class="form-group">
+				<%= f.input :atividade_id,:collection => Atividade.all,:label_method => :nome,:value_method => :id,:label => "Atividade" ,:include_blank => false %>
+			</div>
+		</div>
 
+		<div class="form-actions">
+			<%= f.button :submit %>
+		</div>
+		<% end %>
 	</div>
-
-
-
-</body>
-
-</html>
+</div>

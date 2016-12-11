@@ -17,6 +17,7 @@ class AtividadeUsuariosController < ApplicationController
 	end
 
 	def create
+		return redirect_to root_path
  	# 	atividade_usuario = atividade_params[:atividade_usuario]
     # @usuario = atividade_usuario[:usuario]
 		# @atividade = atividade_usuario[:atividade]
